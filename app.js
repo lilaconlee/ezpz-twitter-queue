@@ -31,6 +31,6 @@ function tweet(line) {
         console.log(err);
         return;
       }
-      console.log('posted', status);
+      console.log('posted', line);
   });
 }
