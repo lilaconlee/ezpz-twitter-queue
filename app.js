@@ -21,6 +21,11 @@ fs.writeFile(file, array.join('\n'), function (err) {
 });
 
 function tweet(line) {
+  if (!line) {
+    console.log('no tweets in the queue');
+    return;
+  }
+
   t.post('statuses/update', { status: line }, function(err, data, response) {
       if (err) {
         console.log(err);
